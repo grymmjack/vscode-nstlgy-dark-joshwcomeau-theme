@@ -3,6 +3,10 @@
   "displayName": "nstlgy-dark-theme",
   "description": "A port of nstlgy-dark which nstlgy created in homage to Josh W. Comeau's theme",
   "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/grymmjack/vscode-nstlgy-dark-joshwcomeau-theme",
+    "type": "github"
+  },
   "publisher": "grymmjack",
   "author": {
     "email": "grymmjack@gmail.com",
@@ -29,5 +33,20 @@
         "path": "./themes/theme.json"
       }
     ]
-  }  
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.2"
+  },
+  "scripts": {
+      "compile": "npm run check-types && node esbuild.js",
+      "check-types": "tsc --noEmit",
+      "watch": "npm-run-all -p watch:*",
+      "watch:esbuild": "node esbuild.js --watch",
+      "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+      "vscode:prepublish": "npm run package",
+      "package": "npm run check-types && node esbuild.js --production"
+  }
 }
