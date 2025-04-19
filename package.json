@@ -1,0 +1,33 @@
+{
+  "name": "vscode-nstlgy-dark-joshwcomeau-theme",
+  "displayName": "nstlgy-dark-theme",
+  "description": "A port of nstlgy-dark which nstlgy created in homage to Josh W. Comeau's theme",
+  "version": "0.0.1",
+  "publisher": "grymmjack",
+  "author": {
+    "email": "grymmjack@gmail.com",
+    "name": "grymmjack (Rick Christy)",
+    "url": "https://youtube.com/grymmjack"
+  },
+  "contributors": [
+    {
+      "name": "nstlgy",
+      "url": "https://github.com/nstlgy/zed-nstlgy-dark"
+    }
+  ],
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "nstlgy-dark (Josh W. Comeau inspired)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/theme.json"
+      }
+    ]
+  }  
+}
